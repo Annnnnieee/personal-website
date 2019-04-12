@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{name}}</title>
+    <title>{{me.name}}</title>
 </head>
 
 <body>
-    <h1>{{name}}</h1>
+    <h1>{{me.name}}</h1>
+    <div>
+        <div>{{me.title}}</div>
+        <div>{{me.email}}</div>
+        <div>{{me.phone}}</div>
+    </div>
     {{#if experiences}}
     <div>
         <h2>Experience</h2>

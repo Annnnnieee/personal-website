@@ -4,7 +4,7 @@ var fs = require("fs");
 var source = fs.readFileSync("./index.html").toString();
 
 var template = Handlebars.compile(source);
-var context = { name: "Arnie", experiences: [
+var context = { me:{ name: "Arnie", title:"nothing really", phone: "234-234-2445", email: "eyeye@hotmail.com"}, experiences: [
     { title: "the supermarket", position: "cashsier", date: "forever", description: "I didn't do much", tools: "I used the cash register" },
     { title: "freelance nothing", position: "bnbbbumming around", date: "yesterday", description: "I didn't do much", tools: "my ass" }
 ], projects: [
