@@ -1,0 +1,64 @@
+.resume {
+    display: flex;
+    flex-flow: column;
+    /* background-color: cornflowerblue; */
+    width: 70%;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.resume-wrapper {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    /* background-color: grey; */
+}
+
+.resume-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: seagreen; */
+    align-items: flex-start;
+}
+
+.resume-header .name{
+    font-family: 'B612';
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 75px;
+    line-height: 1;
+    margin: 10px 0 10px 0;
+}
+
+.qualification {
+    font-family: 'B612';
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+.resume-header .contact {
+    margin: 10px 0 10px 0;
+    font-family: 'B612';
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+
+.resume-body {
+    display: flex;
+    flex-flow: column;
+    background-color: rosybrown;
+}
+
+.resume-aside {
+    background-color: lightcoral;
+}

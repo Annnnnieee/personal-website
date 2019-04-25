@@ -3,57 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{me.name}}</title>
+    <title>{{me.name.firstName}} {{me.name.lastName}}</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href='https://fonts.googleapis.com/css?family=B612' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>{{me.name}}</h1>
-    <div>
-        <div>{{me.title}}</div>
-        <div>{{me.email}}</div>
-        <div>{{me.phone}}</div>
-    </div>
-    {{#if experiences}}
-    <div>
-        <h2>Experience</h2>
-        <ul>
-            {{#each experiences}}
-            <li>
-                <div class="block">
-                    <h3 class="employer-title">{{title}}</h3>
-                    <h4>{{position}}</h4>
-                    <h4>{{date}}</h4>
-                    <p>{{description}}</p>
-                    <p>{{tools}}</p>
+    <div class="resume">
+        <div class="resume-header">
+            <h1 class="name">
+                {{me.name.firstName}} {{me.name.lastName}}
+                <div class="qualification">3rd Year Computer Science Student</div>
+            </h1>
+            <div class="contact">   
+                <div><i class="fas fa-envelope-square fa-2x"></i></div>
+                <div><i class="fab fa-linkedin fa-2x "></i></div>
+            </div>
+        </div>
+        <div class="resume-wrapper">
+            <div class="resume-body">
+                {{#if experiences}}
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <ul>
+                        {{#each experiences}}
+                        <li>
+                            <div class="block">
+                                <h4 class="date">{{date}}</h4>
+                                <h3 class="employer-title">{{title}}</h3>
+                                <h4>{{position}}</h4>
+                                <p>{{description}}</p>
+                                <p>tools: {{tools}}</p>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
                 </div>
-            </li>
-            {{/each}}
-        </ul>
-    </div>
-    {{/if}}
-    {{#if projects}}
-    <div>
-        <h2>Projects</h2>
-        <ul>
-            {{#each projects}}
-            <li>
-                <div class="block">
-                    <h3 class="project-title">{{title}}</h3>
-                    <h4>{{date}}</h4>
-                    <p>{{description}}</p>
-                    <div class= "tools"><span>Tools: {{tools}}</span></div>
+                {{/if}}
+                {{#if projects}}
+                <div class="projects">
+                    <h2>Projects</h2>
+                    <ul>
+                        {{#each projects}}
+                        <li>
+                            <div class="block">
+                                <h3 class="project-title">{{title}}</h3>
+                                <h4>{{date}}</h4>
+                                <p>{{description}}</p>
+                                <div class="tools"><span>Tools: {{tools}}</span></div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
                 </div>
-            </li>
-            {{/each}}
-        </ul>
-    </div>
-    {{/if}}
-    <div>
-        <h2>Education</h2>
-        <ul>
-            {{education}}
-        </ul>
+                {{/if}}
+            </div>
+            <div class="resume-aside">
+                {{#if skills}}
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        {{#each skills}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+                <div>
+                    <h2>Education</h2>
+                    <ul>
+                        {{education}}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
+
 
 </html>
