@@ -1,9 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
 .resume {
     display: flex;
     flex-flow: column;
-    /* background-color: cornflowerblue; */
     width: 70%;
-    max-width: 1300px;
+    max-width: 1100px;
     margin: auto;
     margin-top: 100px;
 }
@@ -14,7 +22,6 @@
     justify-content: space-between;
     width: 85%;
     margin: auto;
-    /* background-color: grey; */
 }
 
 .resume-header {
@@ -24,12 +31,11 @@
     width: 85%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
-    /* background-color: seagreen; */
+    margin-bottom: 50px;
     align-items: flex-start;
 }
 
-.resume-header .name{
+.resume-header .name {
     font-family: 'B612';
     text-transform: uppercase;
     font-weight: lighter;
@@ -52,13 +58,29 @@
     font-size: 17px;
 }
 
-
 .resume-body {
     display: flex;
     flex-flow: column;
-    background-color: rosybrown;
+    flex-wrap: wrap;
 }
 
-.resume-aside {
-    background-color: lightcoral;
+.section-header {
+    font-family: 'B612';
+    text-transform: uppercase;
+    color: grey;
+    margin-top: 15px;
+}
+
+.item-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.block {
+    margin-top: 10px;
+}
+
+.block:hover {
+    background-color: lightgray;
 }
