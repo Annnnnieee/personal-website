@@ -6,22 +6,38 @@
     
     ul {
         list-style: none;
+        background-color: #fff7eb
     }
+
     
     .resume {
         display: flex;
         flex-flow: column;
-        width: 70%;
-        max-width: 1200px;
+        width: 95%;
+        max-width: 150000000px;
         margin: auto;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 10px;
+        /* margin-bottom: 100px; */
     }
     
+    .me {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+    }
+
+    .img {
+        max-height: 80px;
+        border-radius: 50%;
+        vertical-align: bottom;
+        margin-right: 10px;
+    }
     .resume-wrapper {
         display: flex;
         flex-flow: row-reverse;
         justify-content: space-between;
+        vertical-align: middle;
         width: 85%;
         margin: auto;
         /* flex-wrap: wrap; */
@@ -31,31 +47,41 @@
         display: flex;
         flex-flow: row;
         justify-content: space-between;
+        /* align-self: center; */
+        float: left;
         width: 85%;
         margin: auto;
+        align-items: center;
+        /* vertical-align: middle; */
         /* margin-top: 20px; */
-        margin-bottom: 20px;
-        align-items: flex-start;
+        /* margin-bottom: 10px; */
+        /* align-items: flex-start; */
     }
     
+    .icon {
+        margin-right: 10px;
+    }
     .resume-header .name {
         font-family: 'B612';
         text-transform: uppercase;
         font-weight: lighter;
-        font-size: 5em;
+        font-size: 4em;
         line-height: 1;
-        margin: 0 0 10px 0;
+        /* margin: 0 0 5px 0; */
+        align-self: flex-end;
     }
     
     .qualification {
         font-family: 'B612';
         text-transform: uppercase;
         font-weight: lighter;
-        font-size: 17px;
+        font-size: 12px;
+        min-width: 70px;
     }
     
     .resume-header .contact {
-        margin: 0 0 0 30px;
+        display: flex-inline;
+        margin: 0 0 0 0px;
         font-family: 'B612';
         text-transform: uppercase;
         font-size: 17px;
@@ -64,30 +90,34 @@
     .resume-body {
         display: flex;
         flex-flow: column;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         /* max-width: 750px; */
-        /* order: 1; */
-        /* flex-grow: 1; */
+        order: 1;
+        flex-grow: 1;
     }
     
     .resume-aside {
         /* order: 2; */
         /* flex-grow: 1; */
-        margin-right: 25px;
+        /* margin-right: 25px; */
     }
     
     .section-header {
         font-family: 'B612';
         text-transform: uppercase;
         color: grey;
-        margin-top: 25px;
-        font-size: 1.75em;
-        letter-spacing: .25em;
+        margin-top: 3px;
+        font-size: 1.55em;
+        letter-spacing: .3em;
+        background-color: RGB(255, 236, 189)
     }
     
     .block-header {
+        display: flex;
+        flex-flow: row;
         font-family: 'B612';
         font-size: 1em;
+        justify-content: space-between;
     }
     
     .position {
@@ -99,10 +129,9 @@
     
     .date {
         font-family: 'B612';
-        font-size: .95em;
-        font-style: italic;
-        font-weight: lighter;
-        line-height: 1;
+        /* font-size: .95em; */
+        /* font-style: italic; */
+        /* font-weight: lighter; */
     }
     
     .job-description {
@@ -112,7 +141,7 @@
     }
     
     .block {
-        margin-top: 20px;
+        margin-top: 10px;
         line-height: 1.5;
     }
     
@@ -121,8 +150,8 @@
     }
     
     .item {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        /* margin-top: 7px; */
+        margin-bottom: 7px;
     }
     
     .skills ul {
@@ -139,7 +168,7 @@
     }
     
     .project-skills {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-style: italic;
     }
     

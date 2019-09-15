@@ -7,20 +7,31 @@
     <!-- <link rel="stylesheet" href="fade.css"> -->
     <link rel="stylesheet" href="styles2.css">
     <link href='https://fonts.googleapis.com/css?family=B612' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="resume">
         <div class="resume-header">
-            <h1 class="name">
-                {{me.name.firstName}} {{me.name.lastName}}
-                <div class="qualification">3rd Year Computer Science Student</div>
-            </h1>
-            <div class="contact">
-                <div><i class="fas fa-envelope-square fa-2x"></i></div>
-                <div><i class="fab fa-linkedin fa-2x "></i></div>
+            <span class="me">
+                    <img src="me2.png" class="img">
+
+                    <h1 class="name">
+                            {{me.name.firstName}} {{me.name.lastName}}
+                        </h1>
+
+                    </span>
+            <div class="qualification">
+                <div><i class="fas fa-university fa-2x icon"></i>3rd Year Computer Science
+                </div>
+                <div>
+                    <i class="fas fa-envelope-square fa-2x icon"></i>anastasiya.vt.s@gmail.com
+
+                </div>
             </div>
+            <!-- <div><i class="fab fa-linkedin fa-2x "></i></div> -->
+            </span>
         </div>
         <div class="resume-wrapper">
             <div class="resume-body">
@@ -33,16 +44,17 @@
                         <li>
                             <div class="block">
                                 <div class="block-header">
-                                    <h3 class="job">{{position}}</h3>
+                                    <h3 class="job">{{position}} - {{title}}</h3>
+                                    <div class="date">{{date}}</div>
                                 </div>
-                                <h4 class="job-detail"> <span class="position">{{title}} / </span><span class="date">{{date}}</span></h4>
                                 <div class="block-body">
                                     <ul class="job-description item">
                                         {{#each description}}
                                         <li>
                                             {{project}}
                                             <div class="project-skills">
-                                                <span class="skills-label">Skills:</span> {{#each skills}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}
+                                                <span class="skills-label">Skills:</span> {{#each skills}}
+                                                {{this}}{{#unless @last}}, {{/unless}} {{/each}}
                                             </div>
                                         </li>
                                         {{/each}}
@@ -63,11 +75,17 @@
                             <div class="block">
                                 <div class="block-header">
                                     <h3 class="title">{{title}}</h3>
+                                    <div class="date">{{date}}</div>
                                 </div>
-                                <h4 class="date">{{date}}</h4>
+
                                 <div class="block-body">
-                                    <p class="item">{{description}}</p>
-                                    <div class="skills"><span>Skills: {{skills}}</span></div>
+                                    <ul class="job-description item">
+                                        <li>
+                                            <p>{{description}}</p>
+                                            <div class="project-skills"><span class="skills-label">Skills:</span>
+                                                {{skills}}</div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </li>
@@ -75,9 +93,17 @@
                     </ul>
                 </div>
                 {{/if}}
+
+                <div class="section">
+                    <h2 class="section-header">Education</h2>
+                    <hr>
+                    <ul class="item block block-body block-header">
+                        University of British Columbia <span class="date">2016 - Present</span>
+                    </ul>
+                </div>
             </div>
             <div class="resume-aside">
-                {{#if skills}}
+                <!-- {{#if skills}}
                 <div class="skills">
                     <h2 class="section-header">Skills</h2>
                     <hr>
@@ -87,14 +113,7 @@
                         {{/each}}
                     </ul>
                 </div>
-                {{/if}}
-                <div>
-                    <h2 class="section-header">Education</h2>
-                    <hr>
-                    <ul class="item block block-body">
-                        {{education}}
-                    </ul>
-                </div>
+                {{/if}} -->
             </div>
         </div>
     </div>
